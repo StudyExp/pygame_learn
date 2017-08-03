@@ -24,12 +24,12 @@ while True:
     if event.type == QUIT:
         exit()
 
-    screen.fill((0, 0, 0))
+    screen.fill((0, 255, 0))
 
     y = SCREEN_SIZE[1]-font_height
     #找一个合适的起笔位置，最下面开始但是要留一行的空
     for text in reversed(event_text):
-        screen.blit( font.render(text, True, (0, 255, 0)), (0, y) )
+        screen.blit( font.render(text, True, (0, 0, 0)), (0, y) )
         #以后会讲
         y-=font_height
         #把笔提一行
